@@ -6,6 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ferranblanche/standards.git"
+  },
   "keywords": [
     "Standard",
     "Language",
@@ -14,6 +18,10 @@
     "Code",
     "ISO"
   ],
-  "author": "Ferran Blanche",
-  "license": "MIT"
+  "author": "Ferran Blanche <ferran.blanche@gmail.com> (https://github.com/ferranblanche)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ferranblanche/standards/issues"
+  },
+  "homepage": "https://github.com/ferranblanche/standards"
 }
