@@ -1,3 +1,6 @@
-import * as languages from './languages.json';
+import { Language } from '../types';
+import * as languagesData from './languages.json';
+
+const languages: Language[] = languagesData.languages;
 
 export { languages };
