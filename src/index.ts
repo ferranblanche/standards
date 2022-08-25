@@ -1,3 +1,3 @@
-import { LanguageService as Languages } from './languages/languages.service';
+import { LanguageService as Languages } from './services/languages';
 
 export { Languages };
