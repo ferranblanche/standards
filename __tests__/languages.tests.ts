@@ -10,7 +10,7 @@ describe('Language Service', () => {
             { code: 'spanish', valid: false }
         ];
         test.each(testCases)('should return $valid when validating $code is a 2-letter ISO code', (testCase) => {
-            expect(languages.isValid(testCase.code)).toBe(testCase.valid);
+            expect(languages.isValidCode(testCase.code)).toBe(testCase.valid);
         });
     }
     )
