@@ -1,14 +1,7 @@
 import { Language } from "../types"
 
 export interface Dictonary {
-    // getAllLanguages(): Language[],
-    // getAllNames(): string[],
-    // getAllCodes(): string[],
-    // getName(code: string): string,
-    // getNames(codes: string[]): string[],
-    // getCode(name: string): string,
-    // getCodes(names: string[]): string[],
-    // searchCode(name: string): string[],
     contains(code: string): boolean
     get(code: string): Language | undefined
+    search(criterion: string): Language | undefined
 }

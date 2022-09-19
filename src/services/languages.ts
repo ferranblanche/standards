@@ -9,5 +9,9 @@ export class LanguageService implements Dictonary {
     };
     public get(code: string): Language | undefined {
         return languages.find(language => language.code === code);
-    }
+    };
+    public search(criterion: string): Language | undefined {
+        let regex = RegExp(criterion);
+        return languages.find(language => language.code.match(criterion) || language.name.match(criterion) || language.local.match(criterion));
+    };
 };
