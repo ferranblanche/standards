@@ -40,4 +40,16 @@ languages.get('es')
   local: 'Español'
 }
 */
+
+```
+Access the Language information:
+```
+let name = languages.get('en');
+// 'English'
+
+// or
+
+const spanish = languages.get('es');
+let localName = spanish.local;
+// Español
 ```
