@@ -34,22 +34,28 @@ Get a Language by a valid ISO 639-2 code:
 ```
 languages.get('es')
 /*
-{
-  code: 'es',
-  name: 'Spanish',
-  local: 'Español'
-}
-*/
+languages.get('es')
+// { code: 'es', name: 'Spanish', local: 'Español' }
+
+languages.get('en')
+// { code: 'en', name: 'English', local: 'English' }
+
+languages.get('xx')
+// undefined
+
+languages.get('Spanish')
+// undefined
 
 ```
+
 Access the Language information:
 ```
-let name = languages.get('en');
+let name = languages.get('en')
 // 'English'
 
 // or
 
-const spanish = languages.get('es');
-let localName = spanish.local;
+const spanish = languages.get('es')
+let localName = spanish.local
 // Español
 ```
