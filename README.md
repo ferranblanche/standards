@@ -12,7 +12,7 @@ It can be installed in whichever way you prefer, but I recommend NPM:
 npm install @ferranblanche/standards
 ```
 
-## Getting started
+## Languages
 
 Import de Languages module:
 
@@ -45,10 +45,10 @@ Get a Language by a valid ISO 639-2 code:
 
 ```typescript
 languages.get("es");
-// { code: 'es', name: 'Spanish', local: 'Español' }
+// { code: "es", name: "Spanish", local: "Español" }
 
 languages.get("en");
-// { code: 'en', name: 'English', local: 'English' }
+// { code: "en", name: "English", local: "English" }
 
 languages.get("xx");
 // undefined
@@ -61,7 +61,7 @@ Access the Language information:
 
 ```typescript
 let name = languages.get("en");
-// 'English'
+// "English"
 ```
 
 or
@@ -69,5 +69,23 @@ or
 ```typescript
 const spanish = languages.get("es");
 let localName = spanish.local;
-// 'Español'
+// "Español"
+```
+
+### Search Language by Text
+
+Search Language by Text:
+
+```typescript
+languages.get("nl");
+// { code: "nl", name: "Dutch", local: "Nederlands" }
+
+languages.get("Span");
+// { code: "es", name: "Spanish", local: "Español" }
+
+languages.get("語");
+// { "code": "ja", "name": "Japanese", "local": "日本語" }
+
+languages.get("Span本語");
+// undefined
 ```
