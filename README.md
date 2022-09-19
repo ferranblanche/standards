@@ -7,15 +7,18 @@ This library provides ISO codes for:
 ## Installation
 
 It can be installed in whichever way you prefer, but I recommend NPM:
-`npm install @ferranblanche/standards`
+
+```sh
+npm install @ferranblanche/standards
+```
 
 ## Getting started
 
 Import de Languages module:
 
 ```typescript
-import { Languages } from '@ferranblanche/standards'
-const languages = new Languages;
+import { Languages } from "@ferranblanche/standards";
+const languages = new Languages();
 ```
 
 ### Validate ISO code
@@ -23,16 +26,16 @@ const languages = new Languages;
 Validate a String is a valid ISO 639-2 code:
 
 ```typescript
-languages.contains('en')
+languages.contains("en");
 // true
 
-languages.contains('es')
+languages.contains("es");
 // true
 
-languages.contains('spanish')
+languages.contains("spanish");
 // false
 
-languages.contains('xx')
+languages.contains("xx");
 // false
 ```
 
@@ -41,28 +44,28 @@ languages.contains('xx')
 Get a Language by a valid ISO 639-2 code:
 
 ```typescript
-languages.get('es')
+languages.get("es");
 // { code: 'es', name: 'Spanish', local: 'Español' }
 
-languages.get('en')
+languages.get("en");
 // { code: 'en', name: 'English', local: 'English' }
 
-languages.get('xx')
+languages.get("xx");
 // undefined
 
-languages.get('Spanish')
+languages.get("Spanish");
 // undefined
 ```
 
 Access the Language information:
 
 ```typescript
-let name = languages.get('en')
+let name = languages.get("en");
 // 'English'
 
 // or
 
-const spanish = languages.get('es')
-let localName = spanish.local
+const spanish = languages.get("es");
+let localName = spanish.local;
 // Español
 ```
