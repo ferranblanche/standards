@@ -14,17 +14,30 @@ const languages = new Languages;
 ```
 
 ### Validate ISO code
-To validate a String is a valid ISO 639-2 code, run:
+Validate a String is a valid ISO 639-2 code:
 ```
-languages.contains(code: 'en')
-// Returns true
+languages.contains('en')
+// true
 
-languages.contains(code: 'es')
-// Returns true
+languages.contains('es')
+// true
 
-languages.contains(code: 'spanish')
-// Returns false
+languages.contains('spanish')
+// false
 
-languages.contains(code: 'xx')
-// Returns false
+languages.contains('xx')
+// false
+```
+
+### Get Language by ISO code
+Get a Language by a valid ISO 639-2 code:
+```
+languages.get('es')
+/*
+{
+  code: 'es',
+  name: 'Spanish',
+  local: 'Español'
+}
+*/
 ```
