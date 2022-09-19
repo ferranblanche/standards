@@ -1,7 +1,7 @@
 import { Languages } from "../src";
 
 describe('Language Service', () => {
-    let languages = new Languages;
+    const languages = new Languages;
     describe('Validate 2-letter ISO code', () => {
         const testCases = [
             { code: 'es', valid: true },
