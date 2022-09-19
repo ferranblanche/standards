@@ -7,5 +7,5 @@ export interface Dictonary {
     // getCode(name: string): string,
     // getCodes(names: string[]): string[],
     // searchCode(name: string): string[],
-    validateCode(code: string): boolean
+    contains(code: string): boolean
 }
