@@ -1,3 +1,5 @@
+import { Language } from "../types"
+
 export interface Dictonary {
     // getAllLanguages(): Language[],
     // getAllNames(): string[],
@@ -8,4 +10,5 @@ export interface Dictonary {
     // getCodes(names: string[]): string[],
     // searchCode(name: string): string[],
     contains(code: string): boolean
+    get(code: string): Language | undefined
 }
