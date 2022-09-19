@@ -62,10 +62,12 @@ Access the Language information:
 ```typescript
 let name = languages.get("en");
 // 'English'
+```
 
-// or
+or
 
+```typescript
 const spanish = languages.get("es");
 let localName = spanish.local;
-// Español
+// 'Español'
 ```
