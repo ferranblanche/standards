@@ -1,9 +1,9 @@
-export declare type Term = {
+declare type Term = {
     code: string;
     name: string;
     local: string;
 };
-export interface Dictonary {
+interface Dictonary {
     contains(code: string): boolean;
     get(code: string): Term | undefined;
     search(criterion: string): Term | undefined;
@@ -24,3 +24,4 @@ export interface LanguageDictonary extends Dictonary {
     get(code: string): Language | undefined;
     search(criterion: string): Language | undefined;
 }
+export {};
