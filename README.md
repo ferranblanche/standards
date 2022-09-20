@@ -60,7 +60,7 @@ languages.get("Spanish");
 Access the Language information:
 
 ```typescript
-let name = languages.get("en");
+let name = languages.get("en").name;
 // "English"
 ```
 
