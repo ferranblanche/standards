@@ -2,7 +2,7 @@
 
 This library provides ISO codes for:
 
-- [639] Languages including 2-letter code, English and local names.
+- [639-1] Languages including 2-letter code, English and local names.
 
 ## Installation
 
@@ -41,7 +41,7 @@ languages.contains("xx");
 
 ### Get Language by ISO code
 
-Get a Language by a valid ISO 639-2 code:
+Get a Language by a valid ISO 639-1 code:
 
 ```typescript
 languages.get("es");
@@ -77,15 +77,15 @@ let localName = spanish.local;
 Search Language by Text:
 
 ```typescript
-languages.get("nl");
+languages.search("nl");
 // { code: "nl", name: "Dutch", local: "Nederlands" }
 
-languages.get("Span");
+languages.search("Span");
 // { code: "es", name: "Spanish", local: "Español" }
 
-languages.get("語");
+languages.search("語");
 // { "code": "ja", "name": "Japanese", "local": "日本語" }
 
-languages.get("Span本語");
+languages.search("Span本語");
 // undefined
 ```
