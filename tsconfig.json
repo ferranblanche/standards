@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
-    "outDir": "dist",
-    "target": "es2015",
+    "outDir": "lib",
+    "target": "esnext",
     "module": "commonjs",
+    "declaration": true,
     "strict": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
@@ -11,5 +12,5 @@
     "skipLibCheck": true
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist", "__tests__"]
+  "exclude": ["node_modules", "lib", "__tests__"]
 }
