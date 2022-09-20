@@ -1,4 +1,3 @@
-// const languagesData = require('./languages.data.json');
 import { languages } from '../data';
 import { Language, LanguageDictonary } from '../types';
 
