@@ -1,7 +1,7 @@
 {
   "name": "@ferranblanche/standards",
-  "version": "0.1.0",
-  "description": "Library to consult and validate standard codes for languages, countries and currencies",
+  "version": "0.2.0",
+  "description": "Library to consult and validate standard codes for languages and countries",
   "main": "main.js",
   "scripts": {
     "build": "tsc",
@@ -17,7 +17,6 @@
     "Standard",
     "Language",
     "Country",
-    "Currency",
     "Code",
     "ISO"
   ],
@@ -30,9 +29,7 @@
   "devDependencies": {
     "@types/jest": "^28.1.8",
     "jest": "^28.1.3",
-    "ts-jest": "^28.0.8"
-  },
-  "dependencies": {
+    "ts-jest": "^28.0.8",
     "typescript": "^4.7.4"
   }
 }
