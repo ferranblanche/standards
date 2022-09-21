@@ -1,4 +1,7 @@
-import { Countries } from "../src";
+import { describe, it } from 'node:test';
+import assert from 'node:assert/strict';
+
+import { Countries } from "..";
 
 describe('Country Service', () => {
   const countries = new Countries;
@@ -10,8 +13,10 @@ describe('Country Service', () => {
       { req: 'xx', res: false },
       { req: 'Netherlands', res: false },
     ];
-    test.each(testCases)('should return "$res" when validating "$req" as an ISO code', (testCase) => {
-      expect(countries.contains(testCase.req)).toBe(testCase.res);
+    testCases.forEach(testCase => {
+      it('should return "$res" when validating "$req" as a 2-letter ISO req', () => {
+        assert.deepEqual(countries.contains(testCase.req), testCase.res)
+      });
     });
   });
 
@@ -42,8 +47,10 @@ describe('Country Service', () => {
       { req: 'xx', res: undefined },
       { req: 'Spain', res: undefined },
     ];
-    test.each(testCases)('should return "$res" when getting "$req" information', (testCase) => {
-      expect(countries.get(testCase.req)).toEqual(testCase.res);
+    testCases.forEach(testCase => {
+      it('should return "$res" when getting "$req" information', () => {
+        assert.deepEqual(countries.get(testCase.req), testCase.res)
+      });
     });
   });
 
@@ -72,8 +79,10 @@ describe('Country Service', () => {
         }
       },
     ];
-    test.each(testCases)('should return "$res" when getting "$req" information', (testCase) => {
-      expect(countries.search(testCase.req)).toEqual(testCase.res);
+    testCases.forEach(testCase => {
+      it('should return "$res" when getting "$req" information', () => {
+        assert.deepEqual(countries.search(testCase.req), testCase.res)
+      });
     });
   });
 });
