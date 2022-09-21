@@ -3,6 +3,7 @@
 This library provides ISO codes for:
 
 - [3166-1] [Countries](#countries)
+- [4217] [Currencies](#currencies)
 - [639-1] [Languages](#languages)
 
 ## Installation
@@ -138,6 +139,110 @@ countries.search("中");
 */
 
 countries.search("S語");
+// undefined
+```
+
+## Currencies
+
+Import de Currencies module:
+
+```typescript
+import { Currencies } from "@ferranblanche/standards";
+const currencies = new Currencies();
+```
+
+### Validate Currency code
+
+Validate a String is a valid ISO 4217 code:
+
+```typescript
+currencies.contains("usd");
+// true
+
+currencies.contains("eur");
+// true
+
+currencies.contains("US Dollar");
+// false
+
+currencies.contains("xxx");
+// false
+```
+
+### Get Currency by code
+
+Get a Currency by a valid ISO 4217 code:
+
+```typescript
+currencies.get("eur");
+/*
+{
+  "code": "eur",
+  "name": "Euro",
+  "decimals": 2,
+  "symbol": "€"
+}
+*/
+
+currencies.get("usd");
+/*
+{
+  "code": "usd",
+  "name": "US Dollar",
+  "decimals": 2,
+  "symbol": "$"
+}
+*/
+
+currencies.get("xxx");
+// undefined
+
+currencies.get("Euro");
+// undefined
+```
+
+Access the Currency information:
+
+```typescript
+let name = currencies.get("eur").name;
+// "Euro"
+```
+
+or
+
+```typescript
+const euro = currencies.get("eur");
+let symbol = euro.local;
+// "€"
+```
+
+### Search Currency by text
+
+Search Currency by text:
+
+```typescript
+currencies.search("Dirham");
+/*
+{ 
+  "code": "mad", 
+  "name": 
+  "Moroccan Dirham", 
+  "decimals": 2, 
+  "symbol": "" 
+}
+*/
+
+currencies.search("¥");
+/*
+{ 
+  "code": "cny", 
+  "name": "Yuan Renminbi", 
+  "decimals": 2, 
+  "symbol": "¥" 
+}
+*/
+
+currencies.search("hello¥€");
 // undefined
 ```
 
