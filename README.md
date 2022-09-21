@@ -22,7 +22,7 @@ import { Countries } from "@ferranblanche/standards";
 const countries = new Countries();
 ```
 
-### Validate ISO code
+### Validate Country code
 
 Validate a String is a valid ISO 3166-1 code:
 
@@ -40,7 +40,7 @@ countries.contains("xx");
 // false
 ```
 
-### Get Country by ISO code
+### Get Country by code
 
 Get a Country by a valid ISO 3166-1 code:
 
@@ -93,9 +93,9 @@ let localName = poland.local;
 // "Polska"
 ```
 
-### Search Language by Text
+### Search Country by text
 
-Search Language by Text:
+Search Country by text:
 
 ```typescript
 countries.search("de");
@@ -150,7 +150,7 @@ import { Languages } from "@ferranblanche/standards";
 const languages = new Languages();
 ```
 
-### Validate ISO code
+### Validate Language code
 
 Validate a String is a valid ISO 639-1 code:
 
@@ -168,7 +168,7 @@ languages.contains("xx");
 // false
 ```
 
-### Get Language by ISO code
+### Get Language by code
 
 Get a Language by a valid ISO 639-1 code:
 
@@ -201,9 +201,9 @@ let localName = spanish.local;
 // "Español"
 ```
 
-### Search Language by Text
+### Search Language by text
 
-Search Language by Text:
+Search Language by text:
 
 ```typescript
 languages.search("nl");
