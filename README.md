@@ -2,7 +2,8 @@
 
 This library provides ISO codes for:
 
-- [639-1] Languages including 2-letter code, English and local names.
+- [3166-1] [Countries](#countries)
+- [639-1] [Languages](#languages)
 
 ## Installation
 
@@ -23,7 +24,7 @@ const countries = new Countries();
 
 ### Validate ISO code
 
-Validate a String is a valid ISO 639-2 code:
+Validate a String is a valid ISO 3166-1 code:
 
 ```typescript
 countries.contains("us");
@@ -41,7 +42,7 @@ countries.contains("xx");
 
 ### Get Country by ISO code
 
-Get a Country by a valid ISO 639-1 code:
+Get a Country by a valid ISO 3166-1 code:
 
 ```typescript
 countries.get("es");
@@ -151,7 +152,7 @@ const languages = new Languages();
 
 ### Validate ISO code
 
-Validate a String is a valid ISO 639-2 code:
+Validate a String is a valid ISO 639-1 code:
 
 ```typescript
 languages.contains("en");
