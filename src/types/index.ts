@@ -1,7 +1,6 @@
 type Term = {
     code: string,
-    name: string,
-    local: string
+    name: string
 }
 
 interface Dictonary {
@@ -11,6 +10,7 @@ interface Dictonary {
 }
 
 export type Country = Term & {
+    local: string,
     currency: string,
     region: string,
     flag: string,
@@ -22,7 +22,20 @@ export interface CountryDictonary extends Dictonary {
     search(criterion: string): Country | undefined
 }
 
-export type Language = Term
+export type Currency = Term & {
+    decimals: number,
+    symbol: string
+}
+
+export interface CurrencyDictonary extends Dictonary {
+    contains(code: string): boolean
+    get(code: string): Currency | undefined
+    search(criterion: string): Currency | undefined
+}
+
+export type Language = Term & {
+    local: string
+}
 
 export interface LanguageDictonary extends Dictonary {
     contains(code: string): boolean

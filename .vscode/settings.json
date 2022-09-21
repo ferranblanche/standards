@@ -1,6 +1,7 @@
 {
   "conventionalCommits.scopes": [
     "Languages",
-    "Countries"
+    "Countries",
+    "Currencies"
   ]
 }
